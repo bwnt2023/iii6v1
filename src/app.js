@@ -1,3 +1,4 @@
+import "../public/app.scss";
 // Navigation 
 const neu = document.getElementById("new")
 const alt = document.getElementById("old")
@@ -12,10 +13,6 @@ const email = document.getElementById("bemail")
 const save = document.getElementById("submit")
 const beschwerden = document.getElementById("complaints")
 const blabel = document.getElementById("clabel")
-
-
-
-
 
 const navigate = (e) => {
   closeAll();
