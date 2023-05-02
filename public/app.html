@@ -1,63 +1,104 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@go_vrl" />
-    <meta name="twitter:title" content="COOL FROOTS" />
-    <meta name="twitter:description" content="Stay Fresh or Die Trying !" />
-    <meta name="twitter:creator" content="@stereoIII6" />
-    <meta name="twitter:image" content="http://ipfs.io/ipfs/" />
-    <meta name="twitter:domain" content="coolfroots.online" />
-
-    <title><%= htmlWebpackPlugin.options.title %></title>
-
-    <link rel="icon" type="image/png" href="/images/fav.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> _TITLE_ </title>
   </head>
   <body class="layout">
-    <div id="bg">
+   <div id="nav" class="navlayout">
+    <div id="logo" class="box">
+     <img src="./img.png" id="logoimg" />
     </div>
-    <div id="dev-inf">&nbsp;</div>
-    <div id="nav" class="navlayout">
-      <a href="#landing_tag" id="logo" class="box">
-        <img src="./images/iii6_logo.png" id="logoimg" />
-      </a>
-      <div id="links" class="bar">
-        <a href="#manifesto_tag" id="manifesto" class="link">MANIFEST0</a>
-        <a href="#service_tag" id="service" class="link">SERVICE</a>
-        <a href="#team_tag" id="team" class="link">TEAM</a>
+    <div id="links" class="bar">
+     <div id="new" class="link">Neues Mitglied</div>
+     <div id="old" class="link">Mitglieder</div>
+     <div id="data" class="link">Datenbank</div>
+    </div>
+    <div id="defi" class="bar">
+    <div id="seek" class="link">Suchen</div>
+    <div id="info" class="link">Info</div>
+    <div id="user" class="link">Benutzer</div>
+    <div id="net" class="link">Netzwerk</div>
+    </div>
+    </div>
+   <div id="stage" class="stage">
+      <div id="mainForm">
+         <label>Welche Art von Geschäft</label>
+         <select id="ladenart">
+           <option id="default"> --- </option>
+           <option id="laden-verkauf"> Einkaufsladen </option>
+           <option id="laden-service"> Servicegeschäft </option>
+           <option id="online-handel"> Onlinehandel </option>
+           <option id="online-service"> Onlineservice </option>
+           <option id="tel-handel"> Telefonhandel </option>
+           <option id="tel-support"> Telefonsupport </option>
+         </select>
+        <label>Name des Geschäftes</label>
+        <input type="text" placeholder="Firma GmbH" id="buisname"/>
+        <label>Name des Inhabers</label>
+        <input type="text" placeholder="Jean Dough" id="iname"/>
+        <label>Addresse des Geschäftes</label>
+        <input type="text" placeholder="Am Markt 11, 13585 Berlin" id="baddress"/>
+        <label>E Mail Geschäftes</label>
+        <input type="email" placeholder="hallo@firma.de" id="bemail"/>
+        <button id="submit">SPEICHERN</button>
+        
       </div>
-      <div id="defi" class="bar">
-        <div></div>
-        <a href="#folio_tag" id="folio" class="link">FOLIO</a>
-        <div id="connect" class="link">CONNECT</div>
-        <a href="https://iii6.gitbook.io" target="_blank" id="docs" class="link">DOCS</a>
-      </div>
-    </div>
-    <div id="stage" class="stage">
-      <div id="move">
-        <div id="starter"></div>
-        <i id="landing_tag">&nbsp;</i>
-        <h1 class="title" id="title1">interactive web3 solutions</h1>
-        <div class="show">The future of</br>the internet</br>is decentralized</br>interactive and</br>awesome !</div>
-        <i id="manifesto_tag">&nbsp;</i>
-        <h1 class="title" id="title2">iii6 manifesto</h1>
-        <div class="show">this is the show ...</div>
-        <i id="service_tag">&nbsp;</i>
-        <h1 class="title" id="title3">iii6 service</h1>
-        <div class="show">this is the show ...</div>
-        <i id="team_tag">&nbsp;</i>
-        <h1 class="title" id="title4">iii6 team</h1>
-        <div class="show">this is the show ...</div>
-        <i id="folio_tag">&nbsp;</i>
-        <h1 class="title" id="title5">iii6 folio</h1>
-        <div class="show">this is the show ...</div>
-      </div>
-    </div>
-    <div id="foot" class="bar">
-      <div id="copy" class="box">&copy;</div>
-    </div>
+     <div id="complaints">
+       
+        <label id="clabel">Beschwerden</label>
+          <div id="1" class="compl">
+            <label>Wo war die beschwerde</label>
+         <select id="claimat">
+           <option id="default"> --- </option>
+           <option id="google"> Google </option>
+           <option id="amzn"> Amazon </option>
+           <option id="ebay"> Ebay </option>
+           <option id="bing"> Bing </option>
+           <option id="zalando"> Zalando </option>
+           <option id="others"> Sonstiges </option>
+         </select>
+            <label>Wer hat sich beschwert</label>
+            <input type="text" placeholder="@username" id="claimname"/>
+            <input type="date" id="claimstamp"/>
+            <div id="radiogroup">
+              <input type="radio" id="no" name="rg"/> 
+              <label>100% kein Kunde</label>
+              <input type="radio" id="maybe" name="rg"/> 
+              <label>Vielleicht Kunde</label>
+              <input type="radio" id="yes" name="rg"/> 
+              <label>Kein Kunde</label>
+            </div><div id="radiogroup2">
+           <label>gelogen</label>
+           <input type="checkbox" id="unwahr"/>
+           <label>vors. gelogen</label>
+           <input type="checkbox" id="v_unwahr"/>
+            <label>beleidigung</label>
+           <input type="checkbox" id="beleidigung"/>
+            <label>schädigend für geschäft</label>
+           <input type="checkbox" id="geschäftsschädigend">
+            <label>gehackter account</label>
+           <input type="checkbox" id="hacker bewertung"/> 
+            <label>spam</label>
+           <input type="checkbox" id="spam"/> 
+            <label>werbung</label>
+           <input type="checkbox" id="werbung"/> 
+            <label>obszön</label>
+           <input type="checkbox" id="obszön"/>
+            <label>fsk18</label>
+           <input type="checkbox" id="nicht jugenfrei"/>
+            <label>plattform</label>
+           <input type="checkbox" id="plattform richtlinien"/>
+            <label>anderer grund</label>
+           <input type="checkbox" id="sonstiges"/>  
+         </div>
+            <textarea id="claimtxt" placeholder="Beschwerdetext"></textarea><button id="check">CHECK</button>
+            <button id="more">+</button><button id="empty">LEEREN</button><button id="cancel">ABBRECHEN</button>
+          </div>
+        </div>
+   </div>
+   
   </body>
 </html>
